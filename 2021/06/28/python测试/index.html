@@ -9,7 +9,9 @@
 方法(存储在内存中)
 属性（@property def func(self)）
 创建类的两种方法
-使用枚举类(枚举类不可比较大小，但是同一枚举类的成员可以做等值is / not is判断.."><meta name="generator" content="Hexo 5.4.0"></head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Tomspter's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">python测试</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="toc-text">函数式编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-%E5%AD%98%E5%82%A8%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD"><span class="toc-text">方法(存储在内存中)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%EF%BC%88-property-def-func-self-%EF%BC%89"><span class="toc-text">属性（@property def func(self)）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%B1%BB%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">创建类的两种方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%E7%B1%BB-%E6%9E%9A%E4%B8%BE%E7%B1%BB%E4%B8%8D%E5%8F%AF%E6%AF%94%E8%BE%83%E5%A4%A7%E5%B0%8F%EF%BC%8C%E4%BD%86%E6%98%AF%E5%90%8C%E4%B8%80%E6%9E%9A%E4%B8%BE%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E5%8F%AF%E4%BB%A5%E5%81%9A%E7%AD%89%E5%80%BCis-not-is%E5%88%A4%E6%96%AD"><span class="toc-text">使用枚举类(枚举类不可比较大小，但是同一枚举类的成员可以做等值is &#x2F; not is判断)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%E7%B1%BB"><span class="toc-text">定义枚举类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">高级面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B1%BBtypes"><span class="toc-text">元类types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B1%BBtype%E6%9E%84%E9%80%A0%E5%AF%B9%E8%B1%A1"><span class="toc-text">元类type构造对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Slot%E9%99%90%E5%88%B6%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7"><span class="toc-text">使用Slot限制添加属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-text">装饰器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6"><span class="toc-text">python垃圾回收机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python-%E5%BC%82%E5%B8%B8%EF%BC%88Exception%EF%BC%89%E3%80%81%E8%B0%83%E8%AF%95%EF%BC%88Debug%EF%BC%89%E3%80%81%E5%9B%9E%E6%BA%AF%EF%BC%88Traceback"><span class="toc-text">python 异常（Exception）、调试（Debug）、回溯（Traceback)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%EF%BC%88Exception%EF%BC%89"><span class="toc-text">异常（Exception）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%82%E5%B8%B8%EF%BC%9A"><span class="toc-text">常见的异常：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%EF%BC%88Debug%EF%BC%89"><span class="toc-text">调试（Debug）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="toc-text">单元测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E6%B5%8B%E8%AF%95-doctest"><span class="toc-text">文档测试(doctest)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E6%BA%AF%EF%BC%88Traceback"><span class="toc-text">回溯（Traceback)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#with-%E7%94%A8%E6%B3%95"><span class="toc-text">with 用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#f-string-%E5%A4%84%E7%90%86"><span class="toc-text">f_string 处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%A4%8D%E5%88%B6%E7%9A%845%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">数组复制的5种方法</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Python"><i class="tag post-item-tag">Python</i></a><a href="/tags/noteBook"><i class="tag post-item-tag">noteBook</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">python测试</h1><time class="has-text-grey" datetime="2021-06-28T07:26:57.000Z">2021-06-28</time><article class="mt-2 post-content"><p>Python 进阶学习笔记 当年学了点Python2 ，那时候听说什么Python3 失去了Python的灵魂，就没管Python3 。 最近因为项目需要使用Python3，又把当年的那份热血花在了Python3的学习上。 本以为Python3只是Python2 的升级会很好上手，没想到Python3相对于Python2而言有太多的新语法、新概念。 从小养成学习记笔记的好习惯，把学习遇到的重点写下来，第一日后复习用，其次如果有其他同学看到我的笔记，并感觉有用，也是算是我劳动成果的附加收益吧</p>
+使用枚举类(枚举类不可比较大小，但是同一枚举类的成员可以做等值is / not is判断.."><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Tomspter's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">python测试</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">Click back to the top</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">Home</a></h3><h3 class="is-inline-block"><a href="/archives">Archives</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="toc-text">函数式编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-%E5%AD%98%E5%82%A8%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD"><span class="toc-text">方法(存储在内存中)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%EF%BC%88-property-def-func-self-%EF%BC%89"><span class="toc-text">属性（@property def func(self)）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%B1%BB%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">创建类的两种方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE%E7%B1%BB-%E6%9E%9A%E4%B8%BE%E7%B1%BB%E4%B8%8D%E5%8F%AF%E6%AF%94%E8%BE%83%E5%A4%A7%E5%B0%8F%EF%BC%8C%E4%BD%86%E6%98%AF%E5%90%8C%E4%B8%80%E6%9E%9A%E4%B8%BE%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E5%8F%AF%E4%BB%A5%E5%81%9A%E7%AD%89%E5%80%BCis-not-is%E5%88%A4%E6%96%AD"><span class="toc-text">使用枚举类(枚举类不可比较大小，但是同一枚举类的成员可以做等值is &#x2F; not is判断)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%9E%9A%E4%B8%BE%E7%B1%BB"><span class="toc-text">定义枚举类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">高级面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B1%BBtypes"><span class="toc-text">元类types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B1%BBtype%E6%9E%84%E9%80%A0%E5%AF%B9%E8%B1%A1"><span class="toc-text">元类type构造对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Slot%E9%99%90%E5%88%B6%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7"><span class="toc-text">使用Slot限制添加属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-text">装饰器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6"><span class="toc-text">python垃圾回收机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python-%E5%BC%82%E5%B8%B8%EF%BC%88Exception%EF%BC%89%E3%80%81%E8%B0%83%E8%AF%95%EF%BC%88Debug%EF%BC%89%E3%80%81%E5%9B%9E%E6%BA%AF%EF%BC%88Traceback"><span class="toc-text">python 异常（Exception）、调试（Debug）、回溯（Traceback)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%EF%BC%88Exception%EF%BC%89"><span class="toc-text">异常（Exception）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%82%E5%B8%B8%EF%BC%9A"><span class="toc-text">常见的异常：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%EF%BC%88Debug%EF%BC%89"><span class="toc-text">调试（Debug）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="toc-text">单元测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E6%B5%8B%E8%AF%95-doctest"><span class="toc-text">文档测试(doctest)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E6%BA%AF%EF%BC%88Traceback"><span class="toc-text">回溯（Traceback)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#with-%E7%94%A8%E6%B3%95"><span class="toc-text">with 用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#f-string-%E5%A4%84%E7%90%86"><span class="toc-text">f_string 处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%A4%8D%E5%88%B6%E7%9A%845%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-text">数组复制的5种方法</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/Python"><i class="tag post-item-tag">Python</i></a><a href="/tags/noteBook"><i class="tag post-item-tag">noteBook</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">python测试</h1><time class="has-text-grey" datetime="2021-06-28T07:26:57.000Z">2021-06-28</time><article class="mt-2 post-content"><p><img src="https://cdn.jsdelivr.net/gh/tomspter/image@main/img/20210628164210.png" alt="cover"><br>Python 进阶学习笔记 当年学了点Python2 ，那时候听说什么Python3 失去了Python的灵魂，就没管Python3 。 最近因为项目需要使用Python3，又把当年的那份热血花在了Python3的学习上。 本以为Python3只是Python2 的升级会很好上手，没想到Python3相对于Python2而言有太多的新语法、新概念。 从小养成学习记笔记的好习惯，把学习遇到的重点写下来，第一日后复习用，其次如果有其他同学看到我的笔记，并感觉有用，也是算是我劳动成果的附加收益吧</p>
 <span id="more"></span>
 
 <ul>
@@ -130,8 +132,8 @@ obj.pro.__doc__
          del self.key
          obj = mydict()
  result = obj[key]
- obj[&#39;key&#39;] = value
- del obj[&#39;key&#39;]
+ obj['key'] = value
+ del obj['key']
 </code></pre>
 </blockquote>
 </li>
@@ -185,13 +187,13 @@ def __getiter__(self, n):
 <p>1.普通方法</p>
 <pre><code class="python">class Object(object):
    def func(self):
-      print(&#39;hello world!&#39;)
+      print('hello world!')
 object = Object()
 </code></pre>
 <p>2.特殊方法（元类type构造对象）</p>
 <pre><code class="python">def func(self):
-      print(&#39;Hello world!&#39;)
-  object = type(&#39;Object&#39;, (object,), &#123;&#39;func&#39;:func&#125;)
+      print('Hello world!')
+  object = type('Object', (object,), {'func':func})
 #arg1:str 类名 ;arg2:tuple 基类; arg3:dict 成员;
 </code></pre>
 <p><em><strong>类的创建过程</strong></em><br><img src="file:///C:/Users/LiuQixuan/Desktop/pypro/type_class.png" alt="类的创建过程"><br>【CODE】</p>
@@ -215,9 +217,9 @@ obj = Foo()
 </blockquote>
 <h3 id="使用枚举类-枚举类不可比较大小，但是同一枚举类的成员可以做等值is-not-is判断"><a href="#使用枚举类-枚举类不可比较大小，但是同一枚举类的成员可以做等值is-not-is判断" class="headerlink" title="使用枚举类(枚举类不可比较大小，但是同一枚举类的成员可以做等值is / not is判断)"></a>使用枚举类(枚举类不可比较大小，但是同一枚举类的成员可以做等值is / not is判断)</h3><blockquote>
 <pre><code class="python">from enum import Enum
-month = Enum(&#39;Mouth&#39;,(&#39;Jan&#39;, &#39;Feb&#39;, &#39;Mar&#39;, &#39;Apr&#39;, &#39;May&#39;, &#39;Jun&#39;, &#39;Jul&#39;, &#39;Aug&#39;, &#39;Sep&#39;, &#39;Oct&#39;, &#39;Nov&#39;, &#39;Dec&#39;))
+month = Enum('Mouth',('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
 for name ,member in month.__members__.items():
-  print(f&#39;&#123;name&#125;=&gt;&#123;member&#125;=&gt;&#123;member.value&#125;&#39;)
+  print(f'{name}=&gt;{member}=&gt;{member.value}')
 </code></pre>
 </blockquote>
 <h3 id="定义枚举类"><a href="#定义枚举类" class="headerlink" title="定义枚举类"></a>定义枚举类</h3><blockquote>
@@ -233,13 +235,13 @@ class My_weekday(Enum):
   Sat = 6 
 my_weekday = My_weekday()#my_weekday.Sun
 print(my_weekday.Sun)#my_weekday.Sun
-print(my_weekday[&#39;Sun&#39;])#my_weekday.Sun
+print(my_weekday['Sun'])#my_weekday.Sun
 print(my_weekday(0))#my_weekday.Sun
 print(my_weekday.Sun.value)#0
 for name, member in my_weekday.__members__.item():
-  print(f&#39;&#123;name&#125; &#123;member&#125; &#123;member.value&#125;&#39;)
+  print(f'{name} {member} {member.value}')
 【output】
-&quot;&quot;&quot;
+"""
 Sun  My_weekday.Sun 0
 Mon  My_weekday.Mon 1
 Tue  My_weekday.Tue 2
@@ -247,7 +249,7 @@ Wed  My_weekday.Wed 3
 Thu  My_weekday.Thu 4
 Fri  My_weekday.Fri 5
 Sat  My_weekday.Sat 6
-&quot;&quot;&quot;
+"""
 </code></pre>
 </blockquote>
 <h2 id="高级面向对象"><a href="#高级面向对象" class="headerlink" title="高级面向对象"></a>高级面向对象</h2><h3 id="元类types"><a href="#元类types" class="headerlink" title="元类types"></a>元类types</h3><blockquote>
@@ -259,10 +261,10 @@ def func(self, value):
 class Student(object):
   def __init__(self,name):
       self.name = name
-student = Student(&#39;Bob&#39;)
+student = Student('Bob')
 student.age_setter = MethodType(age_setter,func)
 student.age_setter(21)
-print(f&#39;&#123;student.name&#125;is &#123;student.age&#125; years old.&#39;)
+print(f'{student.name}is {student.age} years old.')
 </code></pre>
 <p>动态的给类添加方法</p>
 <pre><code class="python">def func(self, value):
@@ -272,22 +274,22 @@ class Student(object):
           self.name = name
 Student.age_setter = func
 Student.age_setter = MethodType(func, None, Student)
-student = Student(&#39;Bob&#39;)
+student = Student('Bob')
 student.age_setter(21)
-print(f&#39;&#123;student.name&#125;is &#123;student.age&#125; years old.&#39;)
+print(f'{student.name}is {student.age} years old.')
 </code></pre>
 </blockquote>
 <h3 id="元类type构造对象"><a href="#元类type构造对象" class="headerlink" title="元类type构造对象"></a>元类type构造对象</h3><blockquote>
 <pre><code class="python">def func(self):
-      print(&#39;Hello world!&#39;)
-object = type(&#39;Object&#39;, (object,), &#123;&#39;func&#39;:func&#125;)
-#arg1:str 类名 ;arg2:tuple 基类; arg3:dict(&#39;a&#39; = a, &#39;b&#39; = b...) 类变量/静态字段;
+      print('Hello world!')
+object = type('Object', (object,), {'func':func})
+#arg1:str 类名 ;arg2:tuple 基类; arg3:dict('a' = a, 'b' = b...) 类变量/静态字段;
 </code></pre>
 </blockquote>
 <h3 id="使用Slot限制添加属性"><a href="#使用Slot限制添加属性" class="headerlink" title="使用Slot限制添加属性"></a>使用Slot限制添加属性</h3><blockquote>
 <p>slot是一个特殊静态字段,tuple类型.slot只对当前类起作用，对其子类并不起作用</p>
 <pre><code class="python">class Student(object):
-      __slot__ = (&#39;name&#39;, &#39;age&#39;)
+      __slot__ = ('name', 'age')
       def __init__(self, name, age):
           super(Student,self).__init__()
           self.name = name
@@ -307,7 +309,7 @@ object = type(&#39;Object&#39;, (object,), &#123;&#39;func&#39;:func&#125;)
       @age.setter
       def age(self,name):
           self.age = age
-s1 = Student(&#39;Bill&#39;,21)
+s1 = Student('Bill',21)
 s1.score = 89                [ERROR]:不能添加score字段
 </code></pre>
 </blockquote>
@@ -556,28 +558,28 @@ class TestClass(unitest.TestCase):
 <h4 id="文档测试-doctest"><a href="#文档测试-doctest" class="headerlink" title="文档测试(doctest)"></a>文档测试(doctest)</h4><blockquote>
 <p>Python的文档测试模块可以直接提取注释中的代码并执行</p>
 <pre><code class="python">class Dict(dict):
-   &#39;&#39;&#39;
+   '''
    Simple dict but also support access as x.y style.
 
    &gt;&gt;&gt; d1 = Dict()
-   &gt;&gt;&gt; d1[&#39;x&#39;] = 100
+   &gt;&gt;&gt; d1['x'] = 100
    &gt;&gt;&gt; d1.x
    100
    &gt;&gt;&gt; d1.y = 200
-   &gt;&gt;&gt; d1[&#39;y&#39;]
+   &gt;&gt;&gt; d1['y']
    200
-   &gt;&gt;&gt; d2 = Dict(a=1, b=2, c=&#39;3&#39;)
+   &gt;&gt;&gt; d2 = Dict(a=1, b=2, c='3')
    &gt;&gt;&gt; d2.c
-   &#39;3&#39;
-   &gt;&gt;&gt; d2[&#39;empty&#39;]
+   '3'
+   &gt;&gt;&gt; d2['empty']
    Traceback (most recent call last):
        ...
-   KeyError: &#39;empty&#39;
+   KeyError: 'empty'
    &gt;&gt;&gt; d2.empty
    Traceback (most recent call last):
        ...
-   AttributeError: &#39;Dict&#39; object has no attribute &#39;empty&#39;
-   &#39;&#39;&#39;
+   AttributeError: 'Dict' object has no attribute 'empty'
+   '''
    def __init__(self, **kw):
        super(Dict, self).__init__(**kw)
 
@@ -585,12 +587,12 @@ class TestClass(unitest.TestCase):
        try:
            return self[key]
        except KeyError:
-           raise AttributeError(r&quot;&#39;Dict&#39; object has no attribute &#39;%s&#39;&quot; % key)
+           raise AttributeError(r"'Dict' object has no attribute '%s'" % key)
 
    def __setattr__(self, key, value):
        self[key] = value
 
-if __name__==&#39;__main__&#39;:
+if __name__=='__main__':
    import doctest
    doctest.testmod()
 </code></pre>
@@ -608,34 +610,34 @@ traceback.print_exception(*ss.exc_info())
 <h2 id="with-用法"><a href="#with-用法" class="headerlink" title="with 用法"></a>with 用法</h2><blockquote>
 <p>事前事后用with（前后文管理器）</p>
 <pre><code class="python">【version 1.0】
-file = open(&quot;/src/tmp.txt&quot;)
+file = open("/src/tmp.txt")
 data = file.read()
 file.close()  
 #可能会忘记关闭句柄
 #可能会出现异常
 【version 2.0】
-file = open(&quot;/src/tmp.txt&quot;)
+file = open("/src/tmp.txt")
 try:
   data = file.read()
 finally:
   file.close()
 #总体结构安全性都有提升
 【version 3.0 with】
-with open(&quot;/src/tmp.txt&quot;) as file:
+with open("/src/tmp.txt") as file:
   data = file.read()
 </code></pre>
 <p>with 对处理对象需要自定义<code>__enter__() __exit__()</code>方法</p>
 <pre><code class="python">class Sample:
 def __enter__(self):
-  print(&#39;function:enter&#39;)
-  return &quot;SAMPLE&quot;
+  print('function:enter')
+  return "SAMPLE"
    def __exit__(self, type, value, trace):
-      print(&#39;function:exit&#39;)
+      print('function:exit')
 def get_sample():
   return Sample()
 
 with get_sample() as sample:
-  print(f&#39;&#123;sample&#125;do somethings&#39;)
+  print(f'{sample}do somethings')
 
 
 [result:]
@@ -647,19 +649,19 @@ class Sample:
 def __init__(self, value):
   self.num = value
 def __enter__(self):
-  print(&#39;function:enter&#39;)
+  print('function:enter')
   return self
    def __exit__(self, type, value, trace):
-      print(&#39;function:exit&#39;)
-      print(&#39;m_type:&#123;type&#125;\tm_value:&#123;value&#125;\ttrace:&#123;trace&#125;)
+      print('function:exit')
+      print('m_type:{type}\tm_value:{value}\ttrace:{trace})
    def func(self, value):
       return self.num/value
 def get_sample(num):
 return Sample(num)
 
 with get_sample() as sample:
-  print(f&#39;&#123;sample&#125;do somethings&#39;)
-  num = input(&quot;input a number:&quot;)
+  print(f'{sample}do somethings')
+  num = input("input a number:")
   sample.func(num)
 
 
@@ -677,10 +679,10 @@ with get_sample() as sample:
 <li><code>__str __（）</code>返回的字符串是对象的非正式字符串表示，应该可读。<code>__repr __（）</code>返回的字符串是官方表示，应该是明确的。调用<code>str（）</code>和<code>repr（）</code>比直接使用<code>__str __（）</code>和<code>__repr __（）</code>更好。</li>
 <li>默认情况下，f字符串将使用<code>__str __（）</code>，但如果包含转换标志<code>!r</code>，则可以确保它们使用<code>__repr __（）</code>。</li>
 </ul>
-<pre><code class="python">f&quot;&#123;new_comedian&#125;&quot;
-&#39;This __str__&#39;
-f&quot;&#123;new_comedian!r&#125;&quot;
-&#39;This __repr__&#39;
+<pre><code class="python">f"{new_comedian}"
+'This __str__'
+f"{new_comedian!r}"
+'This __repr__'
 </code></pre>
 </blockquote>
 <h2 id="数组复制的5种方法"><a href="#数组复制的5种方法" class="headerlink" title="数组复制的5种方法"></a>数组复制的5种方法</h2><p>python中简单将一个数组赋值给另一个数组,实际上是两个引用指向同一块内存,可能无法达到预期目的.因此这里整理了几种数组拷贝复制的方法.</p>
