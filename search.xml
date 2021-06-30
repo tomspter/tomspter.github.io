@@ -4,6 +4,46 @@
   
     
     <entry>
+      <title>kotlin学习日常</title>
+      <link href="/2021/06/30/kotlin%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%B8%B8/"/>
+      <url>/2021/06/30/kotlin%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%B8%B8/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://source.unsplash.com/random/800x400?universe" alt="cover"><br>kotlin学习，日常随机更新，目标是学完kotlin和ktor，直接上代码片段</p><span id="more"></span><pre><code class="kotlin">fun main() {    /*    定义变量时可选用增强的类型推导     */    val str = "Hello, world!!!"    val strType: String = "Hello, world!!!"    println(str)    println(strType)    /*    代码块函数体，必须声明函数返回类型    Unit类型     */    fun sum(x: Int, y: Int): Int {        return x + y    }    /*    表达式函数体，可以不声明返回值类型    全局类型推导：在有递归等复杂条件下需要显式声明类型     */    fun sumLine(x: Int, y: Int) = x + y    fun foo(x: Int): Int = if (x == 0) 1 else x * foo(x - 1)    println("sum " + sum(1, 2))    println("sumLine " + sumLine(1, 2))    println("foo " + foo(2))}</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Kotlin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>kibana查询时间问题</title>
+      <link href="/2021/06/29/kibana%E6%9F%A5%E8%AF%A2%E6%97%B6%E9%97%B4%E9%97%AE%E9%A2%98/"/>
+      <url>/2021/06/29/kibana%E6%9F%A5%E8%AF%A2%E6%97%B6%E9%97%B4%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://source.unsplash.com/random/800x400?universe" alt="cover"></p><h2 id="kibana查询时间问题"><a href="#kibana查询时间问题" class="headerlink" title="kibana查询时间问题"></a>kibana查询时间问题</h2><p>通过Kibana展示ES数据的时候，会有八个小时的时间差，根据网上的搜索结果来看，原因是Kibana在读取时间的时候没有找到时区信息，所以统一将时间默认为UTC时间，其中主流的修改方法是将Kibana设置中的Timezone for date formatting选项设置成UTC。但是经过查看后发现，日期选择功能没有问题，但最近时间选项是根据UTC时间走的，并不能根本性的解决问题。在写ES的时候就将时间保存为带有时间格式的，这样当Kibana读取到时间的时候能自动调整时间。</p><p>ES文档是通过Python消费Kafka数据存储的。因为Kafka信息中time字段是没有时区的，格式都是YYYY-mm-DD HH:mm:ss。所以目标就是通过Python将时间加上时区</p><h3 id="解决部分"><a href="#解决部分" class="headerlink" title="解决部分"></a>解决部分</h3><pre><code class="python">model_json["time"] = datetime.strptime(model_json["time"], "%Y-%m-%d %H:%M:%S") \                    .replace(tzinfo=timezone(timedelta(hours=8))) \                    .strftime("%Y-%m-%d %H:%M:%S%z")</code></pre><h3 id="Python-API"><a href="#Python-API" class="headerlink" title="Python API"></a>Python API</h3><ul><li><strong>datetime.strptime()</strong> 将字符串转换成datetime对象</li><li><strong>datetime.strftime()</strong> 将date,datetime和time转换成字符串</li><li><strong>datetime.replace()</strong> 修改datetime中属性值包括tzinfo</li><li><strong>timezone()</strong> </li><li><strong>timedelta()</strong></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> ES </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python测试</title>
       <link href="/2021/06/28/python%E6%B5%8B%E8%AF%95/"/>
       <url>/2021/06/28/python%E6%B5%8B%E8%AF%95/</url>
